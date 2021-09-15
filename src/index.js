@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import './index.css';
 import $ from 'jquery';
-import styles from './index.css'
 
 class App extends React.Component {
     constructor() {
