@@ -1,15 +1,19 @@
-// import React from "react";
+import React from "react";
 
-// const SingleCard = (props) => {
-    
-//     return (
-//         <div className="singleCard">
-//             <h5 className="title">Item</h5>
-//             <img className='prodictImage' src='' />
-//             <p className="description"></p>
-//             <button> Add to Wishlist </button>
-//         </div>
-//     )
-// }
+const SingleCard = (props) => {
+    // recieving empty array(original state )
+    console.log('props', props.products);
+    return (
+        <div>
+            <div className="singleCard"  >
+                <h5 className="title">title </h5>
+                <img className='productImage' src='' />
+                <p className="description">describe me </p>
+                <button> Add to Wishlist </button>
+            </div>
 
-// export default SingleCard
+        </div>
+    )
+}
+
+export default SingleCard

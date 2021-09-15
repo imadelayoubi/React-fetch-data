@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import './index.css';
 import $ from 'jquery';
+import SingleCard from "./components/SingleCard";
 
 class App extends React.Component {
     constructor() {
@@ -23,6 +24,7 @@ class App extends React.Component {
             }
             )
     }
+    // checking if the state changed
     componentDidUpdate(prevProps, prevState) {
         if (prevState.myData !== this.state.myData) {
             console.log('data state has changed.')
@@ -30,22 +32,11 @@ class App extends React.Component {
         console.log('prev', prevState.myData);
         console.log('current', this.state.myData);
     }
-
     render() {
         return (
-
             <div>
-                {this.state.myData.map((element, key) => {
-                    return (
-                        <div className="singleCard" key={element.id} >
-                            <h5 className="title">{element.name} </h5>
-                            <img className='productImage' src={element.image_link} />
-                            <p className="description">{element.description}</p>
-                            <button> Add to Wishlist </button>
-                        </div>
-
-                    )
-                })}
+                {/* passing the data through props  */}
+                <SingleCard products={this.state.myData} />
             </div>
         )
     }
