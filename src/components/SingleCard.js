@@ -1,7 +1,4 @@
 import React from "react";
-
-
-
 const SingleCard = (props) => {
     // recieving empty array(original st
     console.log('props', props.products);
@@ -12,8 +9,8 @@ const SingleCard = (props) => {
                     <div className="singleCard"  >
                         <h5 className="title">{element.name} </h5>
                         <img className='productImage' src={element.image_link} />
-                        <p className="description">{element.description} </p>
-                        <button> Add to Wishlist </button>
+                        <p className="description">{element.price} $ </p>
+                        <button className='cardButton'> Show description </button>
                     </div>
 
                 )

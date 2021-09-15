@@ -14,11 +14,11 @@ class App extends React.Component {
     componentDidMount() {
         fetch(`http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline`)
             .then(res => res.json())
-            .then(json => {
+            .then(data => {
                 this.setState({
-                    myData: json
+                    myData: data
                 });
-                console.log('json', this.state);
+                console.log('data', this.state);
             }, (error) => {
                 console.log('Error', error);
             }
